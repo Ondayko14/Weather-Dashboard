@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container-fluid bg-dark text-light" id="top">
-        <h1>Weather Dashboard</h1>
+        <h1 class="app-title">Weather Dashboard</h1>
     </div>
     <div class="container-fluid row">
         <!--Left Side-->
@@ -21,7 +21,7 @@
             <div class="input-group mb-4 col">
                 <input type="text" class="form-control" placeholder="City-Name" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                    <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
                 </div>
             </div>
             <!--Stored Searches-->
@@ -32,22 +32,22 @@
                 <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
                 <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
                 <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
-                <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
+                <button type="button" class="list-group-item list-group-item-action">Vestibulum at eros</button>
             </div>
         </div>
         <!--Right Side-->
-        <div class="jumbotron jumbotron-fluid col-9 mt-3">
+        <div class="jumbotron jumbotron-fluid col-9 mb-0">
             <!--Active City Read-->
-            <div class="container">
-              <h1 id="active-city" class="display-4">Fluid jumbotron</h1>
+            <div class="container border border-dark rounded border-right-0">
+              <h2 id="active-city" class="display-4">Fluid jumbotron</h2>
               <p id="temp" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
               <p id="humi" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
               <p id="wind" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
               <p id="uv" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
             </div>
             <!--Active City Cards-->
-            <h2 class="ml-4">5 Day Forecast:</h2>
-            <div class="container row justify-content-around">
+            <h2 class="ml-5 mt-3">5 Day Forecast:</h2>
+            <div class="container row justify-content-around mt-3 ml-2">
                 <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
                     <div class="card-header">Header</div>
                     <div class="card-body">

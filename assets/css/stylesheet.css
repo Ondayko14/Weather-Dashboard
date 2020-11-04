@@ -5,3 +5,8 @@ body {
 h1 {
     margin: 0;
 }
+
+.app-title {
+    font-size: 4rem;
+    padding: 1rem
+}
