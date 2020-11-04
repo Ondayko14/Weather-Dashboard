@@ -18,8 +18,17 @@ var searchName = function() {
 
 //get the 5 day weather forecast
 var fivedayForecast = function(cityName) {
-    var fiveDay = fetch("http://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&appid="+apiKey);
-    console.log(fiveDay);
+    var apiUrl =("http://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&appid="+apiKey);
+    
+    fetch(apiUrl).then(function(response) {
+        if(response.ok) {
+            response.json().then(function(data) {
+                console.log(data);
+            });
+        } else {
+            alert("Error: " + response.statusText);
+        }
+    });
 };
 
 
