@@ -7,13 +7,14 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--CSS-->
-    <link rel="stlesheet" href="./assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/stylesheet.css">
 </head>
 <body>
-    <div class="container-fluid bg-dark text-light">
+    <div class="container-fluid bg-dark text-light" id="top">
         <h1>Weather Dashboard</h1>
     </div>
     <div class="container-fluid row">
+        <!--Left Side-->
         <div class="container-fluid bg-secondary col-3">
             <!--Search Bar-->
             <h2 class="col">Search for a city:</h2>
@@ -34,18 +35,58 @@
                 <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button>
             </div>
         </div>
-        <div class="input-group mb-4 col-9">
-            
+        <!--Right Side-->
+        <div class="jumbotron jumbotron-fluid col-9 mt-3">
+            <!--Active City Read-->
+            <div class="container">
+              <h1 id="active-city" class="display-4">Fluid jumbotron</h1>
+              <p id="temp" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+              <p id="humi" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+              <p id="wind" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+              <p id="uv" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+            <!--Active City Cards-->
+            <h2 class="ml-4">5 Day Forecast:</h2>
+            <div class="container row justify-content-around">
+                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Primary card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Primary card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Primary card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Primary card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Primary card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-    <div class="container-fluid">
-        
-    </div>
-    <div class="container">
-
-    </div>
+    
 
 
 
