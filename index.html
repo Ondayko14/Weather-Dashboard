@@ -19,13 +19,13 @@
             <!--Search Bar-->
             <h2 class="col">Search for a city:</h2>
             <div class="input-group mb-4 col">
-                <input type="text" class="form-control" placeholder="City-Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <input id="search-bar" type="text" class="form-control" placeholder="City-Name" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
                 </div>
             </div>
             <!--Stored Searches-->
-            <div class="list-group col ml-3">
+            <div id="stored-locations" class="list-group col ml-3">
                 <button type="button" class="list-group-item list-group-item-action">
                 Cras justo odio
                 </button>
@@ -38,7 +38,7 @@
         <!--Right Side-->
         <div class="jumbotron jumbotron-fluid col-9 mb-0">
             <!--Active City Read-->
-            <div class="container border border-dark rounded border-right-0">
+            <div id="active-read" class="container border border-dark rounded border-right-0">
               <h2 id="active-city" class="display-4">Fluid jumbotron</h2>
               <p id="temp" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
               <p id="humi" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
@@ -47,36 +47,36 @@
             </div>
             <!--Active City Cards-->
             <h2 class="ml-5 mt-3">5 Day Forecast:</h2>
-            <div class="container row justify-content-around mt-3 ml-2">
-                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+            <div id="five-day" class="container row justify-content-around mt-3 ml-2">
+                <div id="day-one" class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
                     <div class="card-header">Header</div>
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+                <div id="day-two" class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
                     <div class="card-header">Header</div>
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+                <div id="day-three" class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
                     <div class="card-header">Header</div>
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+                <div id="day-four" class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
                     <div class="card-header">Header</div>
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <div class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
+                <div id="day-five" class="card text-white bg-primary mb-3 col-2" style="max-width: 18rem;">
                     <div class="card-header">Header</div>
                     <div class="card-body">
                       <h5 class="card-title">Primary card title</h5>
