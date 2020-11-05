@@ -111,7 +111,8 @@ var displayCards = function(data) {
         //create the cards
         //container
         var div = $("<div>")
-        .addClass("card text-white bg-primary mb-3 col-2");
+        .addClass("card text-white bg-primary mb-3 col-xl-2 col-sm-12")
+        .css("max-width", "15rem");
         //append
         cardContainer.append(div);
 
@@ -129,7 +130,7 @@ var displayCards = function(data) {
         var body = $("<div>")
         .addClass("card-body");
         //append
-        header.append(body);
+        div.append(body);
 
         //h5 element. Get the emoji
         var emoji = data.list[i].weather[0].icon;
@@ -144,7 +145,7 @@ var displayCards = function(data) {
         var pT = "Temperature: " + data.list[i].main.temp + "F";
         //make the first p
         var pTEl = $("<p>")
-        .addClass("card-text")
+        .addClass("card-text text-left")
         .text(pT);
         //append
         h5.append(pTEl);
@@ -203,8 +204,12 @@ var fivedayForecast = function(cityName) {
 loadNames();
 
 $("#button-addon2").on("click", searchName);
-$("#stored-locations button").on("click", function(event){
-    var id = event.target.id;
-    console.log("hello" + id);
-});
+
+$(document).ready(function() {
+    $("button").on("click", function(event){
+        var id = event.target.id;
+        console.log("hello" + id);
+    });
+})
+
 //when the search button is clicked, identify which one it is then rehit the api

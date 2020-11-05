@@ -14,3 +14,12 @@ h1 {
 #right-side-container {
     display: none;
 }
+
+#five-day div {
+    flex-wrap: wrap;
+    align-items: end;
+}
+
+.card-body {
+    padding: 1rem 0;
+}
