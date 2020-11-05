@@ -22,10 +22,14 @@ var loadNames = function() {
     var name = JSON.parse(localStorage.getItem("CityNames"));
     //empty current list
     //for loop in new list
-    for(i = 0; i > name.length; i++) {
+    for(i = 0; i < name.length; i++) {
         //create an element
-        //add content element
-        //append element
+        var button = $("<button>")
+        .addClass("list-group-item list-group-item-action")
+        .attr("type", "button")
+        .text(name[i]);
+
+        storedLocations.append(button);
 
     }
 }
@@ -73,22 +77,17 @@ var display = function(data) {
     //get the date
     var date = dateFinder();
 
-    console.log(date)
     //get the name of the city
     var name = data.city.name;
-    console.log(name);
 
     //get the temp
     var temper = "Temperature: " + data.list[0].main.temp + "F";
-    console.log(temper);
 
     //get the humidity
     var humidity = "Humidity: " + data.list[0].main.humidity + "%";
-    console.log(humidity);
 
     //get the wind
     var windy = "Wind: " + data.list[0].wind.speed + "mph";
-    console.log(windy);
 
     //Display Name and Date
     activeTitle.text(name + " " + date);
@@ -174,6 +173,9 @@ var searchName = function() {
     //add name to local storage
     savedArr.push(name);
     localStorage.setItem("CityNames", JSON.stringify(savedArr));
+
+    //call the load function
+    loadNames();
 };
 
 
@@ -194,8 +196,20 @@ var fivedayForecast = function(cityName) {
     });
 };
 
-
-
+loadNames();
 $("#button-addon2").on("click", searchName)
 //searchName();
 //fivedayForecast();
+
+//var testfunction = function() {
+    //var button = $("<button>")
+    //.addClass("list-group-item list-group-item-action")
+    //.attr("type", "button")
+    //.text("hello");
+
+    //storedLocations.append(button);
+    
+    //console.log(button);
+////}
+
+//testfunction()
