@@ -21,12 +21,13 @@ var cardContainer = $("#five-day");
 var loadNames = function() {
     var name = JSON.parse(localStorage.getItem("CityNames"));
     //empty current list
+    $("#stored-locations button").remove();
     //for loop in new list
     for(i = 0; i < name.length; i++) {
         //create an element
         var button = $("<button>")
-        .addClass("list-group-item list-group-item-action")
-        .attr("type", "button")
+        .addClass("text-uppercase list-group-item list-group-item-action")
+        .attr({type: "button", id: i})
         .text(name[i]);
 
         storedLocations.append(button);
@@ -196,20 +197,14 @@ var fivedayForecast = function(cityName) {
     });
 };
 
+//when the history button is clicked, the function runs again
+
+
 loadNames();
-$("#button-addon2").on("click", searchName)
-//searchName();
-//fivedayForecast();
 
-//var testfunction = function() {
-    //var button = $("<button>")
-    //.addClass("list-group-item list-group-item-action")
-    //.attr("type", "button")
-    //.text("hello");
-
-    //storedLocations.append(button);
-    
-    //console.log(button);
-////}
-
-//testfunction()
+$("#button-addon2").on("click", searchName);
+$("#stored-locations button").on("click", function(event){
+    var id = event.target.id;
+    console.log("hello" + id);
+});
+//when the search button is clicked, identify which one it is then rehit the api
