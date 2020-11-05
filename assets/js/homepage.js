@@ -17,6 +17,12 @@ var loadNames = function() {
     var name = JSON.parse(localStorage.getItem("CityNames"));
     //empty current list
     //for loop in new list
+    for(i = 0; i > name.length; i++) {
+        //create an element
+        //add content element
+        //append element
+
+    }
 }
 
 
@@ -57,9 +63,7 @@ var dateFinder = function() {
 
 //display the content
 var display = function(data) {
-    //get the uv
-    //var uv = uvCity();
-
+    //The Uv is found in the uvCity/uvFinal functions
     //get the date
     var date = dateFinder();
 
@@ -69,15 +73,15 @@ var display = function(data) {
     console.log(name);
 
     //get the temp
-    var temper = data.list[0].main.temp + "F";
+    var temper = "Temperature: " + data.list[0].main.temp + "F";
     console.log(temper);
 
     //get the humidity
-    var humidity = data.list[0].main.humidity + "%";
+    var humidity = "Humidity: " + data.list[0].main.humidity + "%";
     console.log(humidity);
 
     //get the wind
-    var windy = data.list[0].wind.speed + "mph";
+    var windy = "Wind: " + data.list[0].wind.speed + "mph";
     console.log(windy);
 
     //Display Name and Date
@@ -93,6 +97,22 @@ var display = function(data) {
     wind.text(windy);
 };
 
+var displayCards = function(data) {
+    for (i = 0; i < 3; i++) {
+        //create the cards
+        //container
+        var div = $("<div>")
+        .addClass("card text-white bg-primary mb-3 col-2");
+        console.log(div);
+        //head
+        var header = $("<div>")
+        .addClass("card-header")
+        .text("Header")
+        console.log(header);
+        //give the cards content
+        //append the cards
+    }
+}
 
 //get the value that was inputed from the search
 var searchName = function() {
@@ -119,6 +139,7 @@ var fivedayForecast = function(cityName) {
             response.json().then(function(data) {
                 display(data);
                 uvCity(data);
+                displayCards(data);
             });
         } else {
             alert("Error: " + response.statusText);
