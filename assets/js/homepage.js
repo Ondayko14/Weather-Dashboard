@@ -135,13 +135,13 @@ var displayCards = function(data) {
         div.append(body);
 
         //h5 element. Get the emoji
-        var emoji = data.list[i].weather[0].icon;
+        var emoji = "http://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+".png";
         //make the h5
-        var h5 = $("<h5>")
+        var img = $("<img>")
         .addClass("card-title")
-        .text(emoji);
+        .attr("src", emoji);
         //append
-        body.append(h5);
+        body.append(img);
 
         //make the p element. Get the temp
         var pT = "Temperature: " + data.list[i].main.temp + "F";
@@ -150,7 +150,7 @@ var displayCards = function(data) {
         .addClass("card-text text-left")
         .text(pT);
         //append
-        h5.append(pTEl);
+        body.append(pTEl);
 
         //make the 2nd P element. Get the Humidity
         var pH = "Humidity: " + data.list[i].main.humidity + "%";
@@ -159,7 +159,7 @@ var displayCards = function(data) {
         .addClass("card-text")
         .text(pH);
         //append
-        h5.append(pHEl);
+        body.append(pHEl);
 
     }
 }
@@ -199,9 +199,6 @@ var fivedayForecast = function(cityName) {
         }
     });
 };
-
-//when the history button is clicked, the function runs again
-
 
 loadNames();
 
