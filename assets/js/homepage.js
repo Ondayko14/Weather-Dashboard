@@ -22,6 +22,9 @@ var loadNames = function() {
     var name = JSON.parse(localStorage.getItem("CityNames"));
     //empty current list
     $("#stored-locations button").remove();
+    //empty The Current Search
+    $("#search-bar")
+    .val("");
     //for loop in new list
     for(i = 0; i < name.length; i++) {
         //create an element
