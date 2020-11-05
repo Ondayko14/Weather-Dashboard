@@ -106,6 +106,7 @@ var displayCards = function(data) {
         var div = $("<div>")
         .addClass("card text-white bg-primary mb-3 col-2");
         console.log(div);
+
         //header. Get the Dates
         var date = moment().local().add(i,'d').format("MM/DD/YY");
         console.log(date);
@@ -114,15 +115,20 @@ var displayCards = function(data) {
         .addClass("card-header")
         .text(date);
         console.log(header);
+
         //make the body
         var body = $("<div>")
         .addClass("card-body");
         console.log(body);
-        //h5 element
+
+        //h5 element. Get the emoji
+        var emoji = data.list[i].weather[0].icon;
+        //make the h5
         var h5 = $("<h5>")
         .addClass("card-title")
-        .text("test");
+        .text(emoji);
         console.log(h5);
+
         //append the cards
     }
 }
