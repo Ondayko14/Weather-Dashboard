@@ -12,6 +12,9 @@ var wind = $("#wind");
 var uv = $("#uv");
 var activeTitle = $("#active-city");
 
+//Card Section
+var cardContainer = $("#five-day");
+
 
 //load names
 var loadNames = function() {
@@ -106,6 +109,7 @@ var displayCards = function(data) {
         var div = $("<div>")
         .addClass("card text-white bg-primary mb-3 col-2");
         console.log(div);
+        cardContainer.append(div);
 
         //header. Get the Dates
         var date = moment().local().add(i,'d').format("MM/DD/YY");
@@ -115,11 +119,13 @@ var displayCards = function(data) {
         .addClass("card-header")
         .text(date);
         console.log(header);
+        div.append(header);
 
         //make the body
         var body = $("<div>")
         .addClass("card-body");
         console.log(body);
+        header.append(body);
 
         //h5 element. Get the emoji
         var emoji = data.list[i].weather[0].icon;
@@ -128,6 +134,7 @@ var displayCards = function(data) {
         .addClass("card-title")
         .text(emoji);
         console.log(h5);
+        body.append(h5);
 
         //make the p element. Get the temp
         var pT = "Temperature: " + data.list[i].main.temp + "F";
@@ -136,6 +143,7 @@ var displayCards = function(data) {
         .addClass("card-text")
         .text(pT);
         console.log(pTEl);
+        h5.append(pTEl);
 
         //make the 2nd P element. Get the Humidity
         var pH = "Humidity: " + data.list[i].main.humidity + "%";
@@ -144,7 +152,10 @@ var displayCards = function(data) {
         .addClass("card-text")
         .text(pH);
         console.log(pHEl);
+        h5.append(pHEl);
         //append the cards
+        cardContainer.appendChild(div);
+
     }
 }
 
