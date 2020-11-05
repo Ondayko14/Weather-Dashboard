@@ -205,11 +205,8 @@ loadNames();
 
 $("#button-addon2").on("click", searchName);
 
-$(document).ready(function() {
-    $("button").on("click", function(event){
-        var id = event.target.id;
-        console.log("hello" + id);
-    });
-})
-
 //when the search button is clicked, identify which one it is then rehit the api
+$("#stored-locations").click(function(event) {
+    var id = event.target.id;
+    console.log(id);
+});
