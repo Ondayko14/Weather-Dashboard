@@ -107,6 +107,8 @@ var display = function(data) {
 };
 
 var displayCards = function(data) {
+    //empty old cards
+    $("#five-day div").remove();
     for (i = 1; i < 6; i++) {
         //create the cards
         //container
