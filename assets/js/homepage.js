@@ -208,5 +208,9 @@ $("#button-addon2").on("click", searchName);
 //when the search button is clicked, identify which one it is then rehit the api
 $("#stored-locations").click(function(event) {
     var id = event.target.id;
+    var buttonSelect = event.target.textContent;
+    fivedayForecast(buttonSelect);
     console.log(id);
+    console.log(buttonSelect);
+    console.log(event);
 });
