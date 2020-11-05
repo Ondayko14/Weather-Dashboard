@@ -11,6 +11,7 @@ var humi = $("#humi");
 var wind = $("#wind");
 var uv = $("#uv");
 var activeTitle = $("#active-city");
+var rightContainer = $("#right-side-container");
 
 //Card Section
 var cardContainer = $("#five-day");
@@ -100,6 +101,9 @@ var display = function(data) {
 
     //Display Wind
     wind.text(windy);
+
+    //remove hidden from style
+    rightContainer.css("display", "block");
 };
 
 var displayCards = function(data) {

@@ -10,3 +10,7 @@ h1 {
     font-size: 4rem;
     padding: 1rem
 }
+
+#right-side-container {
+    display: none;
+}
