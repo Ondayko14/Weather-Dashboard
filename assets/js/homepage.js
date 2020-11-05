@@ -44,6 +44,15 @@ var uvFinal = function(data) {
     var uvIndex = data.value;
     console.log(uvIndex);
     uv.text("UV Index: " + uvIndex);
+    if (uvIndex < 2) {
+        uv.css("background-color", "green");
+    } else if (uvIndex > 2 && uvIndex < 5) {
+        uv.css("background-color", "yellow");
+    } else if (uvIndex > 5 && uvIndex < 7) {
+        uv.css("background-color", "red");
+    } else {
+        uv.css("background-color", "purple");
+    };
 }
 
 //Get the UV
