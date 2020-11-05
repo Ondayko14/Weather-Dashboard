@@ -100,7 +100,7 @@ var display = function(data) {
 };
 
 var displayCards = function(data) {
-    for (i = 0; i < 5; i++) {
+    for (i = 1; i < 6; i++) {
         //create the cards
         //container
         var div = $("<div>")
@@ -129,6 +129,21 @@ var displayCards = function(data) {
         .text(emoji);
         console.log(h5);
 
+        //make the p element. Get the temp
+        var pT = "Temperature: " + data.list[i].main.temp + "F";
+        //make the first p
+        var pTEl = $("<p>")
+        .addClass("card-text")
+        .text(pT);
+        console.log(pTEl);
+
+        //make the 2nd P element. Get the Humidity
+        var pH = "Humidity: " + data.list[i].main.humidity + "%";
+        //make the 2nd p
+        var pHEl = $("<p>")
+        .addClass("card-text")
+        .text(pH);
+        console.log(pHEl);
         //append the cards
     }
 }
@@ -151,7 +166,7 @@ var searchName = function() {
 
 //get the 5 day weather forecast
 var fivedayForecast = function(cityName) {
-   var apiUrl =("http://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&units=imperial&cnt=5&appid="+apiKey);
+   var apiUrl =("http://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&units=imperial&cnt=6&appid="+apiKey);
     
     fetch(apiUrl).then(function(response) {
         if(response.ok) {
