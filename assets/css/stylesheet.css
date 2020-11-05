@@ -23,3 +23,14 @@ h1 {
 .card-body {
     padding: 1rem 0;
 }
+
+#whole-wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .app-title {
+        font-size: 2rem;
+    }
+}
