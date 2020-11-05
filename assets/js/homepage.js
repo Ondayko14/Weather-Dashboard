@@ -16,7 +16,10 @@ var display = function(data) {
     var name = data.city.name;
     console.log(name);
     //get the date
+    var date = moment().local().format("MM/DD/YY");
 
+    
+    console.log(date);
 }
 
 
