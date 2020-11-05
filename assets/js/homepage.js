@@ -108,7 +108,7 @@ var displayCards = function(data) {
         //container
         var div = $("<div>")
         .addClass("card text-white bg-primary mb-3 col-2");
-        console.log(div);
+        //append
         cardContainer.append(div);
 
         //header. Get the Dates
@@ -118,13 +118,13 @@ var displayCards = function(data) {
         var header = $("<div>")
         .addClass("card-header")
         .text(date);
-        console.log(header);
+        //append
         div.append(header);
 
         //make the body
         var body = $("<div>")
         .addClass("card-body");
-        console.log(body);
+        //append
         header.append(body);
 
         //h5 element. Get the emoji
@@ -133,7 +133,7 @@ var displayCards = function(data) {
         var h5 = $("<h5>")
         .addClass("card-title")
         .text(emoji);
-        console.log(h5);
+        //append
         body.append(h5);
 
         //make the p element. Get the temp
@@ -142,7 +142,7 @@ var displayCards = function(data) {
         var pTEl = $("<p>")
         .addClass("card-text")
         .text(pT);
-        console.log(pTEl);
+        //append
         h5.append(pTEl);
 
         //make the 2nd P element. Get the Humidity
@@ -151,10 +151,8 @@ var displayCards = function(data) {
         var pHEl = $("<p>")
         .addClass("card-text")
         .text(pH);
-        console.log(pHEl);
+        //append
         h5.append(pHEl);
-        //append the cards
-        cardContainer.appendChild(div);
 
     }
 }
