@@ -12,6 +12,7 @@ var wind = $("#wind");
 var uv = $("#uv");
 var activeTitle = $("#active-city");
 
+
 //load names
 var loadNames = function() {
     var name = JSON.parse(localStorage.getItem("CityNames"));
@@ -58,6 +59,7 @@ var uvCity = function(data) {
 var dateFinder = function() {
     var date = moment().local().format("MM/DD/YY");
     return date;
+
     //console.log(date);
 };
 
@@ -98,18 +100,29 @@ var display = function(data) {
 };
 
 var displayCards = function(data) {
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 5; i++) {
         //create the cards
         //container
         var div = $("<div>")
         .addClass("card text-white bg-primary mb-3 col-2");
         console.log(div);
-        //head
+        //header. Get the Dates
+        var date = moment().local().add(i,'d').format("MM/DD/YY");
+        console.log(date);
+        //place the date in the head
         var header = $("<div>")
         .addClass("card-header")
-        .text("Header")
+        .text(date);
         console.log(header);
-        //give the cards content
+        //make the body
+        var body = $("<div>")
+        .addClass("card-body");
+        console.log(body);
+        //h5 element
+        var h5 = $("<h5>")
+        .addClass("card-title")
+        .text("test");
+        console.log(h5);
         //append the cards
     }
 }
