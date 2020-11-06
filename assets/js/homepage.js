@@ -65,7 +65,7 @@ var uvCity = function(data) {
     var lon = data.city.coord.lon;
     
     //look up the uv with lat and lon
-    apiUrl = "http://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon+"&appid="+apiKey;
+    apiUrl = "https://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon+"&appid="+apiKey;
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
@@ -150,7 +150,7 @@ var displayCards = function(data) {
         div.append(body);
 
         //h5 element. Get the emoji
-        var emoji = "http://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+".png";
+        var emoji = "https://openweathermap.org/img/wn/"+data.list[i].weather[0].icon+".png";
         //make the h5
         var img = $("<img>")
         .addClass("card-title")
@@ -200,7 +200,7 @@ var searchName = function() {
 
 //get the 5 day weather forecast
 var fivedayForecast = function(cityName) {
-   var apiUrl =("http://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&units=imperial&cnt=6&appid="+apiKey);
+   var apiUrl =("https://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&units=imperial&cnt=6&appid="+apiKey);
     
     fetch(apiUrl).then(function(response) {
         if(response.ok) {
