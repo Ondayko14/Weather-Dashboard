@@ -26,6 +26,9 @@ var loadNames = function() {
     $("#search-bar")
     .val("");
     //for loop in new list
+    if(!name){
+        return;
+    }
     for(i = 0; i < name.length; i++) {
         //create an element
         var button = $("<button>")
